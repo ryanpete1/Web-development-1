@@ -30,7 +30,7 @@
     <div id = "map">
     </div>
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script> 
-    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+<!--    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>-->
     <script> 
         // Create variable to hold map element, give initial settings to map
         var map = L.map('map', {
@@ -41,11 +41,11 @@
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
         
         // create custom marker
-        var myariplane = L.icon({iconurl: 'https://raw.githubusercontent.com/gis4533-fall2019/webdev-unit/master/airport.png' ,iconsize: [40,40],})
+        var myAirplane = L.icon({iconurl: 'https://raw.githubusercontent.com/gis4533-fall2019/webdev-unit/master/airport.png' ,iconsize: [40,40],})
         
         //Create sustom layer as template for airport layer
         // code from site
-        var customelayer = L.geoJson(null, {pointtolayer: function (feature, latlong) {return L.marker (latlong, {icon: myAirplane});}}); 
+        var customlayer = L.geoJson(null, {pointtolayer: function (feature, latlong) {return L.marker (latlong, {icon: myAirplane});}}); 
         
         // Create airport locations
         var myAirportcsv = omnivore.csv('https://raw.githubusercontent.com/gis4533-fall2019/webdev-unit/master/airports.csv', null, customlayer) .addTo(map);
