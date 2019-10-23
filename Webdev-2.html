@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Leaflet Map</title>
+
+    <a href="https://leafletjs.com/">I built this with Leaflet</a>
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body,
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <H1>Map made with Leaflet</H1>
+    <H3>GIS 4533 <br>Ryan Peterson</H3>
+
+    <div id="map">
+    </div>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    <!--    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>-->
+    <script>
+        // Create variable to hold map element, give initial settings to map
+        var map = L.map('map', {
+            center: [42.362432, -71.086086],
+            zoom: 7
+        });
+
+        // Add OpenStreetMap tile layer to map element
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // create custom marker
+        var myAirplane = L.icon({
+            iconUrl: 'airport.png',
+            iconSize: [40, 40],
+        })
+
+        //Create sustom layer as template for airport layer
+        // code from site
+        var customlayer = L.geoJson(null, {
+            pointToLayer: function(feature, latlong) {
+                return L.marker(latlong, {
+                    icon: myAirplane
+                });
+            }
+        });
+
+        // Create airport locations
+        var myAirportcsv = omnivore.csv('https://raw.githubusercontent.com/gis4533-fall2019/webdev-unit/master/airports.csv', null, customlayer).addTo(map);
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body></html>

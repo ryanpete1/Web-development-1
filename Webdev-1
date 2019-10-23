@@ -3,32 +3,24 @@
 
 <head>
     <meta charset="utf-8">
-
-    <title>Leaflet Map</title> 
-    
+    <title>Leaflet Map</title>
+    <H1>Map made with Leaflet</H1>
+    <H3>GIS 4533 <br>Ryan Peterson</H3>
+    <a href = "https://leafletjs.com/">I built this with Leaflet</a>
     <!-- External Stylesheets -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
-    <style>
-        body { 
-                padding: 0; 
-                margin: 0;
-        } 
-        html, body, #map {
-                height: 100%; 
-                width: 100%; } 
-    </style>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
 </head>
 
 <body>
     <!-- Our web map and content will go here -->
 <!--Deleted the old version and added the latest to the head And adding airport features   -->
-    <div id="map">
-    </div>
-    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js">
-    </script>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+          src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'  
+            omnivore.csv(https://raw.githubusercontent.com/gis4533-fall2019/webdev-unit/master/airports.csv).addTo(map);></script>
+    <div id="map" style="width: 705px; height: 375px"></div>
 
     <!-- all of the JavaScript for my web map   -->
-    
     <script>
     // Create variable to hold map element, give initial settings to map
         var map = L.map('map', {
@@ -48,9 +40,19 @@
         [42.362681, -71.089830], [42.361829, -71.079230]],
         {color: 'blue', weight: 4}).addTo(map);
         
+    // Bind popup to Data Point object
+        myDataPoint.bindPopup("This is Kendall Square.");
+    // Bind popup to data point object
+        myDataPoint.bindPopup("<h3>Kendall Square</h3><p>Cambridge, MA<br>Information about Kendall Square.</p>");
+    // Bind popup to line object
+        myDataLine.bindPopup("Mass Ave Bridge");
+    // Bind popup to area object
+        myArea.bindPopup("MIT Campus");
 </script>
     
- 
+    
+    </script>
+<!--stopped at lesson 1 step 4-->
     
 </body>
 
