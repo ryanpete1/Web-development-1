@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Leaflet Map</title>
+    <H1>Map made with Leaflet</H1>
+    <H3>GIS 4533 <br>Ryan Peterson</H3>
+    <a href = "https://leafletjs.com/">I built this with Leaflet</a>
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+   <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body,
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Our web map and content will go here -->
+<!--Deleted the old version and added the latest to the head And adding airport features   -->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+          src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'  
+            omnivore.csv(https://raw.githubusercontent.com/gis4533-fall2019/webdev-unit/master/airports.csv).addTo(map);></script>
+    
+
+    <div id="map"></div>
+    <pre id="info">Map coordinates:</pre>
+
+    <!-- all of the JavaScript for my web map   -->
+    <script>
+    // Create variable to hold map element, give initial settings to map
+      
+        // Updated coordinates to display Duluth, MN 
+        var map = L.map('map', {
+            center: [46.7867, -92.1005],
+            zoom: 12});
+    // Add OpenStreetMap tile layer to map element
+      
+        // Updated the basemap to a a desired preference/ OpenStreetMap.HOT
+        var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>' }).addTo(map);
+        
+        
+    // Creating spatial features in Duluth, MN
+    
+    // Create Point Feature for Canal Park
+        var myDataPoint = L.marker([46.7832, -92.0951]) .addTo(map);
+    // Create Line Feature for the Aerial Lift Bridge, style and add to map
+        var myDataLine = L.polyline([[46.779358, -92.093147], [46.778579, -92.092619]], {color: 'green', weight: 10}).addTo(map)
+    // Create Area Feature for UMD, style and add to map
+        var myArea = L.polygon ([[46.820097, -92.089871], [46.823876, -92.083949], [46.819360, -92.078140], [46.815062, -92.078614], [46.815203, -92.090401]], {color: 'red', weight: 4}) .addTo(map);
+        
+    
+        
+    // Create Popups for the Spatial Features
+        
+    // Bind Popup to Data Point Object
+        myDataPoint.bindPopup("Canal Park");
+    // Bind Popup to Line Object
+        myDataLine.bindPopup("Aerial Lift Bridge")
+    // Bind Popup to Area Object
+        myArea.bindPopup("UMD Campus")
+    
+    
+        
+        
+    // Adding Mouse Cursor Coordinates 
+    // based on:
+    //
+        map.on('mousemove', 
+            // start mouse mouse handler function
+            function (e) {
+                console.log('mousemove', e);
+                document.getElementById('info').innerHTML = "Map coordinates" + JSON.stringify(e.latlng);
+            } // end mouse mouse handler function
+        ); // end of showing coords on map
+        
+        
+        
+        
+        
+    // Create point feature for Kendall Square T Station
+        var myDataPoint = L.marker([42.362432, -71.086086]).addTo(map);
+    // Adding aiport image
+    // Create line feature for Mass Ave Bridge, style and add to map
+        var myDataLine = L.polyline([[42.357227, -71.092631], [42.351411, -71.089723]],
+        {color: 'red', weight: 10}).addTo(map);
+    // Create area feature for MIT, style and add to map
+        var myArea = L.polygon([[42.353770, -71.103606], [42.355447, -71.104475],
+        [42.362681, -71.089830], [42.361829, -71.079230]],
+        {color: 'blue', weight: 4}).addTo(map);
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    // Bind popup to Data Point object
+        myDataPoint.bindPopup("This is Kendall Square.");
+    // Bind popup to data point object
+        myDataPoint.bindPopup("<h3>Kendall Square</h3><p>Cambridge, MA<br>Information about Kendall Square.</p>");
+    // Bind popup to line object
+        myDataLine.bindPopup("Mass Ave Bridge");
+    // Bind popup to area object
+        myArea.bindPopup("MIT Campus");
+</script>
+    
+    
+    </script>
+<!--stopped at lesson 1 step 4-->
+    
+</body>
+
+</html>
