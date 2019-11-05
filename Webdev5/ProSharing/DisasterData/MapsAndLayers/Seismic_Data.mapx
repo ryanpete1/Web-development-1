@@ -1,0 +1,1254 @@
+{
+  "type" : "CIMMapDocument",
+  "version" : "1.4.0",
+  "build" : 7198,
+  "mapDefinition" : {
+    "type" : "CIMMap",
+    "name" : "Seismic_Data",
+    "uRI" : "CIMPATH=analysis/map.xml",
+    "sourceModifiedTime" : {
+      "type" : "TimeInstant"
+    },
+    "metadataURI" : "CIMPATH=Metadata/71e962f70353d7e7543daf2140d0a7e5.xml",
+    "illumination" : {
+      "type" : "CIMIlluminationProperties",
+      "ambientLight" : 75,
+      "sunPositionX" : -0.61237243569579003,
+      "sunPositionY" : 0.61237243569579003,
+      "sunPositionZ" : 0.5,
+      "illuminationSource" : "AbsoluteSunPosition",
+      "sunAzimuth" : 315,
+      "sunAltitude" : 30
+    },
+    "layers" : [
+      "CIMPATH=400deed875fd4663922ca55b472263ce.xml",
+      "CIMPATH=Seismic_Data/153f926827ea45cb8cd9c0df56c0b1d0.xml",
+      "CIMPATH=79b31d7db83546e68c8f1e45257f8b8e.xml"
+    ],
+    "defaultViewingMode" : "Map",
+    "mapType" : "Map",
+    "defaultExtent" : {
+      "xmin" : 116.724338495845885,
+      "ymin" : 26.4977464217769239,
+      "xmax" : 153.588336149972406,
+      "ymax" : 49.8244338599723022,
+      "spatialReference" : {
+        "wkid" : 4326,
+        "latestWkid" : 4326
+      }
+    },
+    "elevationSurfaces" : [
+      {
+        "type" : "CIMMapElevationSurface",
+        "elevationMode" : "BaseGlobeSurface",
+        "name" : "Ground",
+        "verticalExaggeration" : 1,
+        "mapElevationID" : "{95B644D4-55A4-44B1-9D0C-317A64A09239}",
+        "color" : {
+          "type" : "CIMRGBColor",
+          "values" : [
+            255,
+            255,
+            255,
+            100
+          ]
+        },
+        "surfaceTINShadingMode" : "Smooth"
+      }
+    ],
+    "generalPlacementProperties" : {
+      "type" : "CIMMaplexGeneralPlacementProperties",
+      "invertedLabelTolerance" : 2,
+      "unplacedLabelColor" : {
+        "type" : "CIMRGBColor",
+        "values" : [
+          255,
+          0,
+          0,
+          100
+        ]
+      },
+      "keyNumberGroups" : [
+        {
+          "type" : "CIMMaplexKeyNumberGroup",
+          "delimiterCharacter" : ".",
+          "horizontalAlignment" : "Left",
+          "maximumNumberOfLines" : 20,
+          "minimumNumberOfLines" : 2,
+          "name" : "Default",
+          "numberResetType" : "None"
+        }
+      ],
+      "placementQuality" : "High"
+    },
+    "snappingProperties" : {
+      "type" : "CIMSnappingProperties",
+      "xYTolerance" : 10,
+      "xYToleranceUnit" : "SnapXYToleranceUnitPixel",
+      "snapToSketchEnabled" : true,
+      "snapRequestType" : "SnapRequestType_GeometricAndVisualSnapping"
+    },
+    "spatialReference" : {
+      "wkid" : 4326,
+      "latestWkid" : 4326
+    },
+    "timeDisplay" : {
+      "type" : "CIMMapTimeDisplay",
+      "defaultTimeIntervalUnits" : "esriTimeUnitsUnknown",
+      "timeValue" : {
+        "type" : "TimeExtent",
+        "start" : null,
+        "end" : null,
+        "empty" : false
+      },
+      "timeRelation" : "esriTimeRelationOverlaps"
+    },
+    "colorModel" : "RGB",
+    "scaleDisplayFormat" : "Value"
+  },
+  "layerDefinitions" : [
+    {
+      "type" : "CIMTiledServiceLayer",
+      "name" : "Light Gray Canvas",
+      "uRI" : "CIMPATH=400deed875fd4663922ca55b472263ce.xml",
+      "sourceModifiedTime" : {
+        "type" : "TimeInstant"
+      },
+      "description" : "Canvas/World_Light_Gray_Reference",
+      "layerElevation" : {
+        "type" : "CIMLayerElevationSurface",
+        "mapElevationID" : "{95B644D4-55A4-44B1-9D0C-317A64A09239}"
+      },
+      "layer3DProperties" : {
+        "type" : "CIM3DLayerProperties",
+        "castShadows" : true,
+        "isLayerLit" : true,
+        "layerFaceCulling" : "None",
+        "maxDistance" : -1,
+        "minDistance" : -1,
+        "preloadTextureCutoffHigh" : 0,
+        "preloadTextureCutoffLow" : 0.25,
+        "textureCutoffHigh" : 0.25,
+        "textureCutoffLow" : 1,
+        "useCompressedTextures" : true,
+        "verticalExaggeration" : 1,
+        "verticalUnit" : {
+          "uwkid" : 9001
+        },
+        "lighting" : "OneSideDataNormal"
+      },
+      "layerType" : "BasemapTopReference",
+      "maxScale" : 9027.9774109999998,
+      "minScale" : 591657527.591555,
+      "showLegends" : true,
+      "visibility" : true,
+      "displayCacheType" : "Permanent",
+      "maxDisplayCacheAge" : 5,
+      "showPopups" : true,
+      "serviceLayerID" : -1,
+      "serviceConnection" : {
+        "type" : "CIMAGSServiceConnection",
+        "objectName" : "Canvas/World_Light_Gray_Reference",
+        "objectType" : "MapServer",
+        "url" : "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer",
+        "serverConnection" : {
+          "type" : "CIMInternetServerConnection",
+          "anonymous" : true,
+          "hideUserProperty" : true,
+          "url" : "http://services.arcgisonline.com/ArcGIS/services"
+        }
+      },
+      "transparentColor" : {
+        "type" : "CIMRGBColor",
+        "values" : [
+          0,
+          0,
+          0,
+          100
+        ]
+      },
+      "backgroundColor" : {
+        "type" : "CIMRGBColor",
+        "values" : [
+          0,
+          0,
+          0,
+          100
+        ]
+      }
+    },
+    {
+      "type" : "CIMFeatureLayer",
+      "name" : "Earthquakes 2012-2014",
+      "uRI" : "CIMPATH=Seismic_Data/3a0ed3dca77f42f1bf40c9389b8fc440.xml",
+      "sourceModifiedTime" : {
+        "type" : "TimeInstant"
+      },
+      "attribution" : "USGS",
+      "layerElevation" : {
+        "type" : "CIMLayerElevationSurface",
+        "mapElevationID" : "{95B644D4-55A4-44B1-9D0C-317A64A09239}"
+      },
+      "expanded" : true,
+      "layerType" : "Operational",
+      "showLegends" : true,
+      "visibility" : true,
+      "displayCacheType" : "Permanent",
+      "maxDisplayCacheAge" : 5,
+      "showPopups" : true,
+      "serviceLayerID" : -1,
+      "featureElevationExpression" : "0",
+      "featureTable" : {
+        "type" : "CIMFeatureTable",
+        "displayField" : "year",
+        "editable" : true,
+        "dataConnection" : {
+          "type" : "CIMStandardDataConnection",
+          "workspaceConnectionString" : "URL=http://services.arcgis.com/ue9rwulIoeLEI9bj/arcgis/rest/services/Strong_Earthquakes_2012_2014/FeatureServer",
+          "workspaceFactory" : "FeatureService",
+          "dataset" : "0",
+          "datasetType" : "esriDTFeatureClass"
+        },
+        "studyAreaSpatialRel" : "esriSpatialRelUndefined",
+        "searchOrder" : "esriSearchOrderSpatial"
+      },
+      "featureTemplates" : [
+        {
+          "type" : "CIMFeatureTemplate",
+          "name" : "Earthquakes 2012-2014",
+          "toolProgID" : "{2A8B3331-5238-4025-972E-452A69535B06}",
+          "defaultValues" : {
+            "type" : "PropertySet",
+            "propertySetItems" : [
+            ]
+          }
+        }
+      ],
+      "htmlPopupEnabled" : true,
+      "selectable" : true,
+      "featureCacheType" : "Session",
+      "enableDisplayFilters" : true,
+      "labelClasses" : [
+        {
+          "type" : "CIMLabelClass",
+          "expression" : "$feature.year",
+          "expressionEngine" : "Arcade",
+          "featuresToLabel" : "AllVisibleFeatures",
+          "maplexLabelPlacementProperties" : {
+            "type" : "CIMMaplexLabelPlacementProperties",
+            "featureType" : "Point",
+            "avoidPolygonHoles" : true,
+            "canOverrunFeature" : true,
+            "canPlaceLabelOutsidePolygon" : true,
+            "canRemoveOverlappingLabel" : true,
+            "canStackLabel" : true,
+            "connectionType" : "Unambiguous",
+            "constrainOffset" : "NoConstraint",
+            "contourAlignmentType" : "Page",
+            "contourLadderType" : "Straight",
+            "contourMaximumAngle" : 90,
+            "enableConnection" : true,
+            "enablePointPlacementPriorities" : true,
+            "featureWeight" : 0,
+            "fontHeightReductionLimit" : 4,
+            "fontHeightReductionStep" : 0.5,
+            "fontWidthReductionLimit" : 90,
+            "fontWidthReductionStep" : 5,
+            "graticuleAlignmentType" : "Straight",
+            "keyNumberGroupName" : "Default",
+            "labelBuffer" : 15,
+            "labelLargestPolygon" : true,
+            "labelPriority" : -1,
+            "labelStackingProperties" : {
+              "type" : "CIMMaplexLabelStackingProperties",
+              "stackAlignment" : "ChooseBest",
+              "maximumNumberOfLines" : 3,
+              "minimumNumberOfCharsPerLine" : 3,
+              "maximumNumberOfCharsPerLine" : 24,
+              "separators" : [
+                {
+                  "type" : "CIMMaplexStackingSeparator",
+                  "separator" : " ",
+                  "splitAfter" : true
+                },
+                {
+                  "type" : "CIMMaplexStackingSeparator",
+                  "separator" : ",",
+                  "visible" : true,
+                  "splitAfter" : true
+                }
+              ]
+            },
+            "lineFeatureType" : "General",
+            "linePlacementMethod" : "OffsetCurvedFromLine",
+            "maximumLabelOverrun" : 36,
+            "maximumLabelOverrunUnit" : "Point",
+            "minimumFeatureSizeUnit" : "Map",
+            "multiPartOption" : "OneLabelPerPart",
+            "offsetAlongLineProperties" : {
+              "type" : "CIMMaplexOffsetAlongLineProperties",
+              "placementMethod" : "BestPositionAlongLine",
+              "labelAnchorPoint" : "CenterOfLabel",
+              "distanceUnit" : "Percentage",
+              "useLineDirection" : true
+            },
+            "pointExternalZonePriorities" : {
+              "type" : "CIMMaplexExternalZonePriorities",
+              "aboveLeft" : 4,
+              "aboveCenter" : 2,
+              "aboveRight" : 1,
+              "centerRight" : 3,
+              "belowRight" : 5,
+              "belowCenter" : 7,
+              "belowLeft" : 8,
+              "centerLeft" : 6
+            },
+            "pointPlacementMethod" : "AroundPoint",
+            "polygonAnchorPointType" : "GeometricCenter",
+            "polygonBoundaryWeight" : 0,
+            "polygonExternalZones" : {
+              "type" : "CIMMaplexExternalZonePriorities",
+              "aboveLeft" : 4,
+              "aboveCenter" : 2,
+              "aboveRight" : 1,
+              "centerRight" : 3,
+              "belowRight" : 5,
+              "belowCenter" : 7,
+              "belowLeft" : 8,
+              "centerLeft" : 6
+            },
+            "polygonFeatureType" : "General",
+            "polygonInternalZones" : {
+              "type" : "CIMMaplexInternalZonePriorities",
+              "center" : 1
+            },
+            "polygonPlacementMethod" : "CurvedInPolygon",
+            "primaryOffset" : 1,
+            "primaryOffsetUnit" : "Point",
+            "removeExtraWhiteSpace" : true,
+            "repetitionIntervalUnit" : "Map",
+            "rotationProperties" : {
+              "type" : "CIMMaplexRotationProperties",
+              "rotationType" : "Arithmetic",
+              "alignmentType" : "Straight"
+            },
+            "secondaryOffset" : 100,
+            "strategyPriorities" : {
+              "type" : "CIMMaplexStrategyPriorities",
+              "stacking" : 1,
+              "overrun" : 2,
+              "fontCompression" : 3,
+              "fontReduction" : 4,
+              "abbreviation" : 5
+            },
+            "thinningDistanceUnit" : "Point",
+            "truncationMarkerCharacter" : ".",
+            "truncationMinimumLength" : 1,
+            "truncationPreferredCharacters" : "aeiou"
+          },
+          "name" : "Class 1",
+          "priority" : -1,
+          "standardLabelPlacementProperties" : {
+            "type" : "CIMStandardLabelPlacementProperties",
+            "featureType" : "Line",
+            "featureWeight" : "Low",
+            "labelWeight" : "High",
+            "numLabelsOption" : "OneLabelPerName",
+            "lineLabelPosition" : {
+              "type" : "CIMStandardLineLabelPosition",
+              "above" : true,
+              "inLine" : true,
+              "parallel" : true
+            },
+            "lineLabelPriorities" : {
+              "type" : "CIMStandardLineLabelPriorities",
+              "aboveStart" : 3,
+              "aboveAlong" : 3,
+              "aboveEnd" : 3,
+              "centerStart" : 3,
+              "centerAlong" : 3,
+              "centerEnd" : 3,
+              "belowStart" : 3,
+              "belowAlong" : 3,
+              "belowEnd" : 3
+            },
+            "pointPlacementMethod" : "AroundPoint",
+            "pointPlacementPriorities" : {
+              "type" : "CIMStandardPointPlacementPriorities",
+              "aboveLeft" : 2,
+              "aboveCenter" : 2,
+              "aboveRight" : 1,
+              "centerLeft" : 3,
+              "centerRight" : 2,
+              "belowLeft" : 3,
+              "belowCenter" : 3,
+              "belowRight" : 2
+            },
+            "rotationType" : "Arithmetic",
+            "polygonPlacementMethod" : "AlwaysHorizontal"
+          },
+          "textSymbol" : {
+            "type" : "CIMSymbolReference",
+            "symbol" : {
+              "type" : "CIMTextSymbol",
+              "blockProgression" : "TTB",
+              "depth3D" : 1,
+              "extrapolateBaselines" : true,
+              "fontEffects" : "Normal",
+              "fontEncoding" : "Unicode",
+              "fontFamilyName" : "Tahoma",
+              "fontStyleName" : "Regular",
+              "fontType" : "Unspecified",
+              "haloSize" : 1,
+              "height" : 10,
+              "hinting" : "Default",
+              "horizontalAlignment" : "Left",
+              "kerning" : true,
+              "letterWidth" : 100,
+              "ligatures" : true,
+              "lineGapType" : "ExtraLeading",
+              "symbol" : {
+                "type" : "CIMPolygonSymbol",
+                "symbolLayers" : [
+                  {
+                    "type" : "CIMSolidFill",
+                    "enable" : true,
+                    "color" : {
+                      "type" : "CIMRGBColor",
+                      "values" : [
+                        0,
+                        0,
+                        0,
+                        100
+                      ]
+                    }
+                  }
+                ]
+              },
+              "textCase" : "Normal",
+              "textDirection" : "LTR",
+              "verticalAlignment" : "Bottom",
+              "verticalGlyphOrientation" : "Right",
+              "wordSpacing" : 100,
+              "billboardMode3D" : "FaceNearPlane"
+            }
+          },
+          "useCodedValue" : true,
+          "visibility" : true,
+          "iD" : -1
+        }
+      ],
+      "renderer" : {
+        "type" : "CIMClassBreaksRenderer",
+        "barrierWeight" : "High",
+        "breaks" : [
+          {
+            "type" : "CIMClassBreak",
+            "label" : "\u22645.900000",
+            "patch" : "Default",
+            "symbol" : {
+              "type" : "CIMSymbolReference",
+              "symbol" : {
+                "type" : "CIMPointSymbol",
+                "symbolLayers" : [
+                  {
+                    "type" : "CIMVectorMarker",
+                    "enable" : true,
+                    "name" : "Group 2",
+                    "anchorPointUnits" : "Relative",
+                    "dominantSizeAxis3D" : "Z",
+                    "size" : 6,
+                    "billboardMode3D" : "FaceNearPlane",
+                    "frame" : {
+                      "xmin" : -2,
+                      "ymin" : -2,
+                      "xmax" : 2,
+                      "ymax" : 2
+                    },
+                    "markerGraphics" : [
+                      {
+                        "type" : "CIMMarkerGraphic",
+                        "geometry" : {
+                          "curveRings" : [
+                            [
+                              [
+                                1.2246467991473532e-16,
+                                2
+                              ],
+                              {
+                                "a" : [
+                                  [
+                                    1.2246467991473532e-16,
+                                    2
+                                  ],
+                                  [
+                                    5.7416924596968218e-16,
+                                    0
+                                  ],
+                                  0,
+                                  1
+                                ]
+                              }
+                            ]
+                          ]
+                        },
+                        "symbol" : {
+                          "type" : "CIMPolygonSymbol",
+                          "symbolLayers" : [
+                            {
+                              "type" : "CIMSolidStroke",
+                              "enable" : true,
+                              "capStyle" : "Round",
+                              "joinStyle" : "Round",
+                              "lineStyle3D" : "Strip",
+                              "miterLimit" : 10,
+                              "width" : 0.69999999999999996,
+                              "color" : {
+                                "type" : "CIMRGBColor",
+                                "values" : [
+                                  0,
+                                  0,
+                                  0,
+                                  100
+                                ]
+                              }
+                            },
+                            {
+                              "type" : "CIMSolidFill",
+                              "enable" : true,
+                              "color" : {
+                                "type" : "CIMRGBColor",
+                                "values" : [
+                                  223,
+                                  115,
+                                  255,
+                                  100
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "respectFrame" : true
+                  }
+                ],
+                "haloSize" : 1,
+                "scaleX" : 1,
+                "angleAlignment" : "Display"
+              },
+              "symbolName" : "Group 2"
+            },
+            "upperBound" : 5.9000000000000004
+          },
+          {
+            "type" : "CIMClassBreak",
+            "label" : "\u22646.400000",
+            "patch" : "Default",
+            "symbol" : {
+              "type" : "CIMSymbolReference",
+              "symbol" : {
+                "type" : "CIMPointSymbol",
+                "symbolLayers" : [
+                  {
+                    "type" : "CIMVectorMarker",
+                    "enable" : true,
+                    "name" : "Group 2",
+                    "anchorPointUnits" : "Relative",
+                    "dominantSizeAxis3D" : "Z",
+                    "size" : 9,
+                    "billboardMode3D" : "FaceNearPlane",
+                    "frame" : {
+                      "xmin" : -2,
+                      "ymin" : -2,
+                      "xmax" : 2,
+                      "ymax" : 2
+                    },
+                    "markerGraphics" : [
+                      {
+                        "type" : "CIMMarkerGraphic",
+                        "geometry" : {
+                          "curveRings" : [
+                            [
+                              [
+                                1.2246467991473532e-16,
+                                2
+                              ],
+                              {
+                                "a" : [
+                                  [
+                                    1.2246467991473532e-16,
+                                    2
+                                  ],
+                                  [
+                                    5.7416924596968218e-16,
+                                    0
+                                  ],
+                                  0,
+                                  1
+                                ]
+                              }
+                            ]
+                          ]
+                        },
+                        "symbol" : {
+                          "type" : "CIMPolygonSymbol",
+                          "symbolLayers" : [
+                            {
+                              "type" : "CIMSolidStroke",
+                              "enable" : true,
+                              "capStyle" : "Round",
+                              "joinStyle" : "Round",
+                              "lineStyle3D" : "Strip",
+                              "miterLimit" : 10,
+                              "width" : 0.69999999999999996,
+                              "color" : {
+                                "type" : "CIMRGBColor",
+                                "values" : [
+                                  0,
+                                  0,
+                                  0,
+                                  100
+                                ]
+                              }
+                            },
+                            {
+                              "type" : "CIMSolidFill",
+                              "enable" : true,
+                              "color" : {
+                                "type" : "CIMRGBColor",
+                                "values" : [
+                                  223,
+                                  115,
+                                  255,
+                                  100
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "respectFrame" : true
+                  }
+                ],
+                "haloSize" : 1,
+                "scaleX" : 1,
+                "angleAlignment" : "Display"
+              },
+              "symbolName" : "Group 2"
+            },
+            "upperBound" : 6.4000000000000004
+          },
+          {
+            "type" : "CIMClassBreak",
+            "label" : "\u22647.100000",
+            "patch" : "Default",
+            "symbol" : {
+              "type" : "CIMSymbolReference",
+              "symbol" : {
+                "type" : "CIMPointSymbol",
+                "symbolLayers" : [
+                  {
+                    "type" : "CIMVectorMarker",
+                    "enable" : true,
+                    "name" : "Group 2",
+                    "anchorPointUnits" : "Relative",
+                    "dominantSizeAxis3D" : "Z",
+                    "size" : 12,
+                    "billboardMode3D" : "FaceNearPlane",
+                    "frame" : {
+                      "xmin" : -2,
+                      "ymin" : -2,
+                      "xmax" : 2,
+                      "ymax" : 2
+                    },
+                    "markerGraphics" : [
+                      {
+                        "type" : "CIMMarkerGraphic",
+                        "geometry" : {
+                          "curveRings" : [
+                            [
+                              [
+                                1.2246467991473532e-16,
+                                2
+                              ],
+                              {
+                                "a" : [
+                                  [
+                                    1.2246467991473532e-16,
+                                    2
+                                  ],
+                                  [
+                                    5.7416924596968218e-16,
+                                    0
+                                  ],
+                                  0,
+                                  1
+                                ]
+                              }
+                            ]
+                          ]
+                        },
+                        "symbol" : {
+                          "type" : "CIMPolygonSymbol",
+                          "symbolLayers" : [
+                            {
+                              "type" : "CIMSolidStroke",
+                              "enable" : true,
+                              "capStyle" : "Round",
+                              "joinStyle" : "Round",
+                              "lineStyle3D" : "Strip",
+                              "miterLimit" : 10,
+                              "width" : 0.69999999999999996,
+                              "color" : {
+                                "type" : "CIMRGBColor",
+                                "values" : [
+                                  0,
+                                  0,
+                                  0,
+                                  100
+                                ]
+                              }
+                            },
+                            {
+                              "type" : "CIMSolidFill",
+                              "enable" : true,
+                              "color" : {
+                                "type" : "CIMRGBColor",
+                                "values" : [
+                                  223,
+                                  115,
+                                  255,
+                                  100
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "respectFrame" : true
+                  }
+                ],
+                "haloSize" : 1,
+                "scaleX" : 1,
+                "angleAlignment" : "Display"
+              },
+              "symbolName" : "Group 2"
+            },
+            "upperBound" : 7.0999999999999996
+          },
+          {
+            "type" : "CIMClassBreak",
+            "label" : "\u22648.600000",
+            "patch" : "Default",
+            "symbol" : {
+              "type" : "CIMSymbolReference",
+              "symbol" : {
+                "type" : "CIMPointSymbol",
+                "symbolLayers" : [
+                  {
+                    "type" : "CIMVectorMarker",
+                    "enable" : true,
+                    "name" : "Group 2",
+                    "anchorPointUnits" : "Relative",
+                    "dominantSizeAxis3D" : "Z",
+                    "size" : 18,
+                    "billboardMode3D" : "FaceNearPlane",
+                    "frame" : {
+                      "xmin" : -2,
+                      "ymin" : -2,
+                      "xmax" : 2,
+                      "ymax" : 2
+                    },
+                    "markerGraphics" : [
+                      {
+                        "type" : "CIMMarkerGraphic",
+                        "geometry" : {
+                          "curveRings" : [
+                            [
+                              [
+                                1.2246467991473532e-16,
+                                2
+                              ],
+                              {
+                                "a" : [
+                                  [
+                                    1.2246467991473532e-16,
+                                    2
+                                  ],
+                                  [
+                                    5.7416924596968218e-16,
+                                    0
+                                  ],
+                                  0,
+                                  1
+                                ]
+                              }
+                            ]
+                          ]
+                        },
+                        "symbol" : {
+                          "type" : "CIMPolygonSymbol",
+                          "symbolLayers" : [
+                            {
+                              "type" : "CIMSolidStroke",
+                              "enable" : true,
+                              "capStyle" : "Round",
+                              "joinStyle" : "Round",
+                              "lineStyle3D" : "Strip",
+                              "miterLimit" : 10,
+                              "width" : 0.69999999999999996,
+                              "color" : {
+                                "type" : "CIMRGBColor",
+                                "values" : [
+                                  0,
+                                  0,
+                                  0,
+                                  100
+                                ]
+                              }
+                            },
+                            {
+                              "type" : "CIMSolidFill",
+                              "enable" : true,
+                              "color" : {
+                                "type" : "CIMRGBColor",
+                                "values" : [
+                                  223,
+                                  115,
+                                  255,
+                                  100
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "respectFrame" : true
+                  }
+                ],
+                "haloSize" : 1,
+                "scaleX" : 1,
+                "angleAlignment" : "Display"
+              },
+              "symbolName" : "Group 2"
+            },
+            "upperBound" : 8.5999999999999996
+          }
+        ],
+        "classBreakType" : "GraduatedSymbol",
+        "classificationMethod" : "NaturalBreaks",
+        "colorRamp" : {
+          "type" : "CIMFixedColorRamp",
+          "colorSpace" : {
+            "type" : "CIMICCColorSpace",
+            "url" : "Default RGB"
+          },
+          "colors" : [
+            {
+              "type" : "CIMRGBColor",
+              "colorSpace" : {
+                "type" : "CIMICCColorSpace",
+                "url" : "Default RGB"
+              },
+              "values" : [
+                248,
+                227,
+                194,
+                100
+              ]
+            },
+            {
+              "type" : "CIMRGBColor",
+              "colorSpace" : {
+                "type" : "CIMICCColorSpace",
+                "url" : "Default RGB"
+              },
+              "values" : [
+                229,
+                153,
+                140,
+                100
+              ]
+            },
+            {
+              "type" : "CIMRGBColor",
+              "colorSpace" : {
+                "type" : "CIMICCColorSpace",
+                "url" : "Default RGB"
+              },
+              "values" : [
+                216,
+                104,
+                104,
+                100
+              ]
+            },
+            {
+              "type" : "CIMRGBColor",
+              "colorSpace" : {
+                "type" : "CIMICCColorSpace",
+                "url" : "Default RGB"
+              },
+              "values" : [
+                175,
+                70,
+                93,
+                100
+              ]
+            },
+            {
+              "type" : "CIMRGBColor",
+              "colorSpace" : {
+                "type" : "CIMICCColorSpace",
+                "url" : "Default RGB"
+              },
+              "values" : [
+                135,
+                35,
+                81,
+                100
+              ]
+            }
+          ]
+        },
+        "field" : "magnitude",
+        "minimumBreak" : 5.7000000000000002,
+        "numberFormat" : {
+          "type" : "CIMNumericFormat",
+          "alignmentOption" : "esriAlignLeft",
+          "alignmentWidth" : 0,
+          "roundingOption" : "esriRoundNumberOfDecimals",
+          "roundingValue" : 6,
+          "zeroPad" : true
+        },
+        "showInAscendingOrder" : true,
+        "heading" : "magnitude",
+        "sampleSize" : 10000,
+        "defaultSymbol" : {
+          "type" : "CIMSymbolReference",
+          "symbol" : {
+            "type" : "CIMPointSymbol",
+            "symbolLayers" : [
+              {
+                "type" : "CIMVectorMarker",
+                "enable" : true,
+                "anchorPointUnits" : "Relative",
+                "dominantSizeAxis3D" : "Z",
+                "size" : 4,
+                "billboardMode3D" : "FaceNearPlane",
+                "frame" : {
+                  "xmin" : -2,
+                  "ymin" : -2,
+                  "xmax" : 2,
+                  "ymax" : 2
+                },
+                "markerGraphics" : [
+                  {
+                    "type" : "CIMMarkerGraphic",
+                    "geometry" : {
+                      "curveRings" : [
+                        [
+                          [
+                            1.2246467991473532e-16,
+                            2
+                          ],
+                          {
+                            "a" : [
+                              [
+                                1.2246467991473532e-16,
+                                2
+                              ],
+                              [
+                                2.2962127484012875e-16,
+                                0
+                              ],
+                              0,
+                              1
+                            ]
+                          }
+                        ]
+                      ]
+                    },
+                    "symbol" : {
+                      "type" : "CIMPolygonSymbol",
+                      "symbolLayers" : [
+                        {
+                          "type" : "CIMSolidStroke",
+                          "enable" : true,
+                          "capStyle" : "Round",
+                          "joinStyle" : "Round",
+                          "lineStyle3D" : "Strip",
+                          "miterLimit" : 10,
+                          "width" : 0.69999999999999996,
+                          "color" : {
+                            "type" : "CIMRGBColor",
+                            "values" : [
+                              0,
+                              0,
+                              0,
+                              100
+                            ]
+                          }
+                        },
+                        {
+                          "type" : "CIMSolidFill",
+                          "enable" : true,
+                          "color" : {
+                            "type" : "CIMRGBColor",
+                            "values" : [
+                              130,
+                              130,
+                              130,
+                              100
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "respectFrame" : true
+              }
+            ],
+            "haloSize" : 1,
+            "scaleX" : 1,
+            "angleAlignment" : "Display"
+          }
+        },
+        "defaultLabel" : "<out of range>",
+        "exclusionLabel" : "<excluded>",
+        "exclusionSymbol" : {
+          "type" : "CIMSymbolReference",
+          "symbol" : {
+            "type" : "CIMPointSymbol",
+            "symbolLayers" : [
+              {
+                "type" : "CIMVectorMarker",
+                "enable" : true,
+                "anchorPointUnits" : "Relative",
+                "dominantSizeAxis3D" : "Z",
+                "size" : 4,
+                "billboardMode3D" : "FaceNearPlane",
+                "frame" : {
+                  "xmin" : -2,
+                  "ymin" : -2,
+                  "xmax" : 2,
+                  "ymax" : 2
+                },
+                "markerGraphics" : [
+                  {
+                    "type" : "CIMMarkerGraphic",
+                    "geometry" : {
+                      "curveRings" : [
+                        [
+                          [
+                            1.2246467991473532e-16,
+                            2
+                          ],
+                          {
+                            "a" : [
+                              [
+                                1.2246467991473532e-16,
+                                2
+                              ],
+                              [
+                                2.2962127484012875e-16,
+                                0
+                              ],
+                              0,
+                              1
+                            ]
+                          }
+                        ]
+                      ]
+                    },
+                    "symbol" : {
+                      "type" : "CIMPolygonSymbol",
+                      "symbolLayers" : [
+                        {
+                          "type" : "CIMSolidStroke",
+                          "enable" : true,
+                          "capStyle" : "Round",
+                          "joinStyle" : "Round",
+                          "lineStyle3D" : "Strip",
+                          "miterLimit" : 10,
+                          "width" : 0.69999999999999996,
+                          "color" : {
+                            "type" : "CIMRGBColor",
+                            "values" : [
+                              0,
+                              0,
+                              0,
+                              100
+                            ]
+                          }
+                        },
+                        {
+                          "type" : "CIMSolidFill",
+                          "enable" : true,
+                          "color" : {
+                            "type" : "CIMRGBColor",
+                            "values" : [
+                              255,
+                              0,
+                              0,
+                              100
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "respectFrame" : true
+              }
+            ],
+            "haloSize" : 1,
+            "scaleX" : 1,
+            "angleAlignment" : "Display"
+          }
+        },
+        "useExclusionSymbol" : false,
+        "normalizationType" : "Nothing"
+      },
+      "scaleSymbols" : true,
+      "snappable" : true,
+      "symbolLayerDrawing" : {
+        "type" : "CIMSymbolLayerDrawing",
+        "symbolLayers" : [
+          {
+            "type" : "CIMSymbolLayerIdentifier",
+            "symbolReferenceName" : "RequiredForDraw",
+            "symbolLayerName" : "Group 1"
+          },
+          {
+            "type" : "CIMSymbolLayerIdentifier",
+            "symbolReferenceName" : "RequiredForDraw",
+            "symbolLayerName" : "Group 2"
+          },
+          {
+            "type" : "CIMSymbolLayerIdentifier",
+            "symbolReferenceName" : "RequiredForDraw",
+            "symbolLayerName" : "Group 3"
+          },
+          {
+            "type" : "CIMSymbolLayerIdentifier",
+            "symbolReferenceName" : "RequiredForDraw",
+            "symbolLayerName" : "Group 4"
+          }
+        ]
+      }
+    },
+    {
+      "type" : "CIMGroupLayer",
+      "name" : "Strong_Earthquakes_2012_2014",
+      "uRI" : "CIMPATH=Seismic_Data/153f926827ea45cb8cd9c0df56c0b1d0.xml",
+      "sourceModifiedTime" : {
+        "type" : "TimeInstant"
+      },
+      "metadataURI" : "CIMPATH=Metadata/41994d844e97ccc085c068e47f144bf2.xml",
+      "description" : "Strong_Earthquakes_2012_2014",
+      "layerElevation" : {
+        "type" : "CIMLayerElevationSurface",
+        "mapElevationID" : "{95B644D4-55A4-44B1-9D0C-317A64A09239}"
+      },
+      "expanded" : true,
+      "layerType" : "Operational",
+      "showLegends" : true,
+      "visibility" : true,
+      "displayCacheType" : "Permanent",
+      "maxDisplayCacheAge" : 5,
+      "showPopups" : true,
+      "serviceLayerID" : -1,
+      "layers" : [
+        "CIMPATH=Seismic_Data/3a0ed3dca77f42f1bf40c9389b8fc440.xml"
+      ]
+    },
+    {
+      "type" : "CIMTiledServiceLayer",
+      "name" : "Light Gray Canvas",
+      "uRI" : "CIMPATH=79b31d7db83546e68c8f1e45257f8b8e.xml",
+      "sourceModifiedTime" : {
+        "type" : "TimeInstant"
+      },
+      "description" : "Canvas/World_Light_Gray_Base",
+      "layerElevation" : {
+        "type" : "CIMLayerElevationSurface",
+        "mapElevationID" : "{95B644D4-55A4-44B1-9D0C-317A64A09239}"
+      },
+      "layer3DProperties" : {
+        "type" : "CIM3DLayerProperties",
+        "castShadows" : true,
+        "isLayerLit" : true,
+        "layerFaceCulling" : "None",
+        "maxDistance" : -1,
+        "minDistance" : -1,
+        "preloadTextureCutoffHigh" : 0,
+        "preloadTextureCutoffLow" : 0.25,
+        "textureCutoffHigh" : 0.25,
+        "textureCutoffLow" : 1,
+        "useCompressedTextures" : true,
+        "verticalExaggeration" : 1,
+        "verticalUnit" : {
+          "uwkid" : 9001
+        },
+        "lighting" : "OneSideDataNormal"
+      },
+      "layerType" : "BasemapBackground",
+      "maxScale" : 9027.9774109999998,
+      "minScale" : 591657527.591555,
+      "showLegends" : true,
+      "visibility" : true,
+      "displayCacheType" : "Permanent",
+      "maxDisplayCacheAge" : 5,
+      "showPopups" : true,
+      "serviceLayerID" : -1,
+      "serviceConnection" : {
+        "type" : "CIMAGSServiceConnection",
+        "objectName" : "Canvas/World_Light_Gray_Base",
+        "objectType" : "MapServer",
+        "url" : "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer",
+        "serverConnection" : {
+          "type" : "CIMInternetServerConnection",
+          "anonymous" : true,
+          "hideUserProperty" : true,
+          "url" : "http://services.arcgisonline.com/ArcGIS/services"
+        }
+      },
+      "transparentColor" : {
+        "type" : "CIMRGBColor",
+        "values" : [
+          0,
+          0,
+          0,
+          100
+        ]
+      },
+      "backgroundColor" : {
+        "type" : "CIMRGBColor",
+        "values" : [
+          0,
+          0,
+          0,
+          100
+        ]
+      }
+    }
+  ],
+  "binaryReferences" : [
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/41994d844e97ccc085c068e47f144bf2.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20170627</CreaDate><CreaTime>07474300</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Strong_Earthquakes_2012_2014</resTitle></idCitation><idAbs>World earthquakes for 2012 to 2014 (3 years) of magnitude 5.7 and greater. Attribute fields include: year, month, day, latitude, longitude, depth in kilometers, magnitude, and place description.&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;This data was derived from data provided by the United States Geological Survey (USGS). The original date field was transferred to three fields, year, month, and day.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;The data and related materials are made available through Esri \r\n(http://www.esri.com) and are intended for educational purposes only \r\n(see Access and Use Constraints section).&lt;br /&gt;&lt;/div&gt;</idAbs><searchKeys><keyword>GettingInfoFromMaps</keyword><keyword>GetInfo</keyword><keyword>world</keyword><keyword>earthquakes</keyword><keyword>strong</keyword><keyword>recent</keyword><keyword>Esri Training Services</keyword></searchKeys><idPurp>World earthquakes of magnitude 5.7 and greater, for 3 years (2012 to 2014).</idPurp><idCredit>USGS, Esri Training Services - for educational purposes only</idCredit><resConst><Consts><useLimit>Use of this Data is restricted to training, demonstration, and \r\neducational purposes only. This Data cannot be sold or used for \r\nmarketing without the express written consent of Environmental Systems \r\nResearch Institute Inc. THE DATA AND RELATED MATERIALS MAY CONTAIN SOME \r\nNONCONFORMITIES, DEFECTS, OR ERRORS. ESRI DOES NOT WARRANT THAT THE DATA\r\n WILL MEET USER'S NEEDS OR EXPECTATIONS; THAT THE USE OF THE DATA WILL \r\nBE UNINTERRUPTED; OR THAT ALL NONCONFORMITIES, DEFECTS, OR ERRORS CAN OR\r\n WILL BE CORRECTED. ESRI IS NOT INVITING RELIANCE ON THIS DATA, AND THE \r\nUSER SHOULD ALWAYS VERIFY ACTUAL DATA. THE DATA AND RELATED MATERIALS \r\nARE PROVIDED &amp;quot;AS-IS,&amp;quot; WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR \r\nIMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF \r\nMERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL \r\nESRI AND/OR ITS LICENSOR(S) BE LIABLE FOR COSTS OF PROCUREMENT OF \r\nSUBSTITUTE GOODS OR SERVICES; LOST PROFITS, LOST SALES, OR BUSINESS \r\nEXPENDITURES, INVESTMENTS, OR COMMITMENTS IN CONNECTION WITH ANY \r\nBUSINESS; LOSS OF ANY GOODWILL; OR FOR ANY INDIRECT, SPECIAL, \r\nINCIDENTAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THIS \r\nAGREEMENT OR USE OF THE DATA AND RELATED MATERIALS, HOWEVER CAUSED, ON \r\nANY THEORY OF LIABILITY, AND WHETHER OR NOT ESRI OR ITS LICENSOR(S) HAVE\r\n BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. THESE LIMITATIONS SHALL\r\n APPLY NOTWITHSTANDING ANY FAILURE OF ESSENTIAL PURPOSE OF ANY EXCLUSIVE\r\n REMEDY. In the event that the data vendor(s) has (have) granted the end\r\n user permission to redistribute the Geodata, please use proper \r\nproprietary or copyright attribution for the various data vendor(s), and\r\n provide the associated metadata file(s) with the Geodata.</useLimit></Consts></resConst></dataIdInfo><Binary><Thumbnail><Data EsriPropertyType=\"PictureX\">/9j/4AAQSkZJRgABAQEAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a\r\nHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy\r\nMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACFAMgDAREA\r\nAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA\r\nAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3\r\nODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm\r\np6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA\r\nAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx\r\nBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK\r\nU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3\r\nuLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+gAo\r\nAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgA\r\noAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACg\r\nAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAQsFGWIAzjmgCO4uYLSLzbmeOGPcF3yO\r\nFGScAZPckgfjQNJvYloEFABQAUAFABQAUAFABQAUAFABQAUAFAGXI9zoukXlzK15q0kbSTJFHGvm\r\nFSSRGoGM4HHqfyFLYvSUktiPVPEun6Ilk+o/aII7shVkMDssbHGA5UHaSWA570XsEYOV7GxTICgA\r\n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\r\njnJwQMjp0wWY3OHLZR1/rb+mbc+m2Vzew3k9tFJcQo8ccjLkqr43D8cCmZqTSsTQQRW0EcEESRQx\r\nqFSONQqqB0AA6CgG76skoEFABQAUAFABQAUAYfiPwtZeIo4pHaS21C35tb2E4kgbIOR2IyBwfek1\r\ncuFRwfl2OfXR/GEPiG81kjTb26j3Wtn5z+Wn2Y5cMdqFg+7ap5wQD9aVnuaKVO3K7pfr953a52jc\r\nADjkA5qjAWgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAo\r\nAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgA\r\noAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACgAoAKACg\r\nAoAKACgAoAKACgAoA//ZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\r\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\r\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\r\nAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</Data></Thumbnail></Binary></metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/71e962f70353d7e7543daf2140d0a7e5.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20170627</CreaDate><CreaTime>07423400</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><scaleRange><minScale>150000000</minScale><maxScale>5000</maxScale></scaleRange></Esri><dataIdInfo><idCitation><resTitle>Seismic_Data</resTitle></idCitation><idPurp>Japan earthquakes of magnitude 5.7 and greater from recent years.</idPurp><idAbs>&lt;DIV STYLE=\"text-align:Left;\"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;World earthquakes for 2012 to 2014 (3 years) of magnitude 5.7 and greater. Attribute fields include: year, month, day, latitude, longitude, depth in kilometers, magnitude, and place description.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;This data was derived from data provided by the United States Geological Survey (USGS). The original date field was transferred to three fields, year, month, and day.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;The data and related materials are made available through Esri (http://www.esri.com) and are intended for educational purposes only (see Access and Use Constraints section).&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN /&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</idAbs><idCredit>United States Geological Survey, Esri.</idCredit><searchKeys><keyword>Seismic</keyword><keyword>earthquakes</keyword><keyword>Japan</keyword><keyword>ProSharing</keyword></searchKeys></dataIdInfo><mdHrLv><ScopeCd value=\"005\"/></mdHrLv><mdDateSt Sync=\"TRUE\">20170705</mdDateSt><Binary><Thumbnail><Data EsriPropertyType=\"PictureX\">/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK\r\nCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU\r\nFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCACFAMgDASIA\r\nAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA\r\nAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3\r\nODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm\r\np6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA\r\nAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx\r\nBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK\r\nU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3\r\nuLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9JYbZ\r\nbZdq7v8AgbM//oVRbLz7Vu8+P7P/AHPK+f8A773/APstWNn+3Rv+ba/36AGQwyp/rZ/O/wCA7Kmo\r\nooAKKqf2kv2jy/IufvbN3lfJVugApm1afRQAz5qEfdTLmb7NFu2s/wDuLvohm85XZVZP+uy7KAJq\r\nHdUV3ZtiL/HTPmofbQBEmpWb/duYH/7a1YpiJsWn0AFFH3a4zxJ4kaaV7azl/c/xOn8VNagZWvXP\r\n2/VLiX+DdsWul8HwrbaXLOzL8zfN/s7a4yug0qFf+Efu/wDSY4ZZW2bJm2fdqmAXPjCeZpVaCN7d\r\nvk2f7NclNoNi2rJqflf6Uq/K+5//AECrv8VNkmVGRWZUdvup/erWEpU7uDtfT5FRlKN+V2voOooo\r\n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</Data></Thumbnail></Binary></metadata>\r\n"
+    }
+  ]
+}
