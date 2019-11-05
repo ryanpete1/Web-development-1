@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Leaflet Map</title>
+    <H1>Map made with Leaflet</H1>
+    <H3>GIS 4533 <br>Ryan Peterson</H3>
+    <a href="https://leafletjs.com/">I built this with Leaflet</a>
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body,
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- Our web map and content will go here -->
+    <!--Deleted the old version and added the latest to the head And adding airport features   -->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    <div id="map">
+    </div>
+    <!-- Add JavaScript Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // Create variable to hold map element, give initial settings to map
+        var map = L.map('map', {
+            center: [46.7867, -92.1005],
+            zoom: 11
+        });
+        // Add OpenStreetMap tile layer to map element
+
+        // Update Basemap to CartoDB Positron
+        var CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        }).addTo(map);
+
+        // load GeoJSON from an external file        
+        $.getJSON("duluth_precincts_WGS84.json", function(data) {
+
+            // add GeoJSON layer to the map once the file is loaded
+            L.geoJson(data, {
+                style: function(feature) {
+
+                    // calculate third party percent of vote using function
+                    var PartyPct = calculatePartyPct(feature);
+                    console.log(PartyPct);
+
+                    // assign colors from the ColorBrewer yellow-green scale
+                    var fill;
+                    // equal interval classification
+                    // rep 40%
+                    if (PartyPct.rep >= 40) {
+                        fill = '#ca0020';
+                        console.log('rep40');
+                    }
+
+                    // rep 30%
+                    else if (PartyPct >= 35) {
+                        fill = '#f4a582';
+                        console.log('rep35');
+                    }
+                    
+                    // else party
+                    else if (PartyPct.rep <= 34 && PartyPct.dem <= 59){
+                        fill ='#f7f7f7';
+                        fill = '#92c5de';
+                        console.log  ('rep34');
+                        console.log ('dem59');
+                    }
+                    
+                    // dem 65% or more
+                    else {
+                        fill = '#0571b0'; 
+                        console.log('dem65')
+                    }
+
+                    // FIXME: remove existing symbolization and create a diverging
+                    // symbology based the democrat or republic vote as a percent
+                    // of the total vote.
+                    // Use Colorbrewer's 5-class Red-Blue colors for this
+                    // http://colorbrewer2.org/#type=diverging&scheme=RdBu&n=5
+
+                    // return style specification
+                    return {
+                        color: '#636363',
+                        weight: 2,
+                        fillColor: fill,
+                        fillOpacity: 0.7
+                    }
+                },
+
+                // do something to each feature
+                // in this case create a popup
+                onEachFeature: function(feature, layer) {
+                    var PartyPct = calculatePartyPct(feature);
+                    // show name of precinct and third party percent in popup
+                    layer.bindPopup(
+                        "<h3>" + feature.properties.PCTNAME + "</h3>" +
+                        "<p> Democratic Party Vote: " + PartyPct.dem + "%</p>" +
+                        "<p> Republican Party Vote:" + PartPct.rep + "%</p>");;
+                }
+            }).addTo(map);
+        });
+
+        // a function that takes a feature and returns the percent of the vote
+        // that doesn't belong to Republican or Democrat (ie. Third Party)
+        function calculateThirdPartyPct(feature) {
+            var demVote = feature.properties.USPRSDFL;
+            var repVote = feature.properties.USPRSR;
+            var totalVote = feature.properties.USPRSTOTAL;
+
+            // calculate as dem percent of the total vote
+            var demPct = Math.round(demVote / totalVote * 100);
+
+            // calculate as rep percent of the total vote
+            var repPct = Math.round(repVote / totalVote * 100)
+
+            // return the democratic and republican percent for this feature
+            return {
+                rep: repPct,
+                dem: demPct
+            }
+        };
+    </script>
+
+
+</body></html>
